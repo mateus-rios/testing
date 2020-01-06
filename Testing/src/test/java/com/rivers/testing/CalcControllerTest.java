@@ -31,7 +31,7 @@ public class CalcControllerTest {
 	public void sumShouldBeThree() throws Exception {
 		when(calcService.sum()).thenReturn(5);
 		this.mockMvc.perform(get("/sum")).andDo(print()).andExpect(status().isOk())
-        .andExpect(content().string(containsString("Hello Mock")));
+        .andExpect(content().string(containsString("5")));
 	}
 	
 }
