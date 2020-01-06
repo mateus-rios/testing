@@ -11,23 +11,19 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.rivers.testing.controller.CalcController;
 import com.rivers.testing.controller.HelloController;
-import com.rivers.testing.service.CalcService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest
+@Import(Config.class)
 public class HelloControllerTest {
    
 	@Autowired
 	private HelloController helloController;
-	
-	@MockBean
-	private CalcService calcService;
 	
 	@Autowired
 	private MockMvc mockMvc;
