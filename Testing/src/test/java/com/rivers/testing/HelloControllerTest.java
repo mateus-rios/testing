@@ -15,11 +15,12 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.rivers.config.MockBeanConfig;
 import com.rivers.testing.controller.HelloController;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest
-@Import(Config.class)
+@Import(MockBeanConfig.class)
 public class HelloControllerTest {
    
 	@Autowired
